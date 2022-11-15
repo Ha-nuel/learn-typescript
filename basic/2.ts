@@ -35,3 +35,29 @@ enum Week2 {
 }
 
 // 이 경우에는 월요일 값에서 1씩 증가해서 화요일의 값이 23이 된다.
+
+let any: any = 123;
+any = 'Hi';
+any = {};
+any = null;
+
+// Any는 모든 타입을 의미한다. Any를 쓰면 사실상 타입스크립트의 의미가 없어진다고 한다.
+
+let u: unknown = 123;
+
+// 알 수 없는 타입을 의미하지만, 다른 타입에는 할당할 수 없다.
+// 이 역시 명확한 타입을 사용하는 것이 좋다.
+
+let obj: object = {};
+let arr: object = [];
+let fn: object = function () {};
+
+// 여러 타입의 상위 타입이기 때문에 유용하지 않다.
+
+let objA: { name: string; age: number } = {
+  name: 'hi',
+  age: 123,
+};
+
+// 정확하게 타입 지정을 하기 위해 객체 프로퍼티 타입을 개별적으로 지정할 수 있다.
+// 반복적으로 사용할 때는 interface 혹은 type을 쓰자.
