@@ -61,3 +61,19 @@ let objA: { name: string; age: number } = {
 
 // 정확하게 타입 지정을 하기 위해 객체 프로퍼티 타입을 개별적으로 지정할 수 있다.
 // 반복적으로 사용할 때는 interface 혹은 type을 쓰자.
+
+// null과 undefined는 모든 타입의 하위 타입으로, 각 타입에 할당할 수 있다.
+
+function hello(msg: string): void {
+  console.log(`something ${msg}`);
+}
+
+// void는 일반적으로 값을 반환하지 않는 함수에서 사용한다.
+// : void 위치는 함수가 반환 타입을 명시하는 곳이다.
+// 실제로 값을 반환하지 않는 함수는 undefined를 반환한다.
+
+function error(message: string): never {
+  throw new Error(message);
+}
+
+// never는 절대 발생하지 않을 값을 나타내며, 어떠한 타입도 적용할 수 없다.
